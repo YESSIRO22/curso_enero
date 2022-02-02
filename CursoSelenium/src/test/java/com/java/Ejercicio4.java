@@ -4,7 +4,7 @@ public class Ejercicio4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int nro1=20;
+		int nro1=15;
 		int nro2=20;
 		
 		if(nro1==nro2)
