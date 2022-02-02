@@ -49,7 +49,7 @@ public class Operadores {
 				}
 				
 				String msg="Hello";
-				String msg2="Hola";
+				String msg2="Helo";
 				
 				if(msg!=msg2) { //se puede poner asi tambien (msg equals msg2)
 					System.out.println("true");
@@ -79,6 +79,7 @@ public class Operadores {
 					System.out.println ("TODOS LOS VALORES SON IGUALES");
 				}else {
 					System.out.println ("ALGUN VALOR ES DESIGUAL");
+					
 				}
 
 	}

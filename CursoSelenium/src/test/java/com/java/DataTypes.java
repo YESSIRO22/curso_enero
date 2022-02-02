@@ -24,7 +24,7 @@ public class DataTypes {
 				char symbol= 'c';
 				
 				//cadena char
-				String message= "hola";
+				String message= "hello";
 				
 				//imprimir en consola
 				
