@@ -11,6 +11,8 @@ public class Ejercicio5 {
 		
 		if(x>0) {
 			System.out.println("El numero "+x+" es positivo.");
+		}else if(x==0) {
+			System.out.println("El numero ingresado es 0");
 		}else {
 			System.out.println("El numero "+x+" es negativo.");
 		}
