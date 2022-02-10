@@ -26,6 +26,7 @@ public class EjercicioSumaImpar {
 	
 	public static int sumOdd (int inicio, int fin) {
 		int suma=0;
+		if(inicio>=0 && fin>=0) {
 		if(inicio<=fin) {
 			for (int i=inicio;i<=fin;i++){
 				boolean impar=isOdd(i);
@@ -33,14 +34,15 @@ public class EjercicioSumaImpar {
 					suma=suma+i;
 					}
 			}
-			return suma;
 		}
+			return suma;
+		}else {
 			return suma=-1;
-	}
+		}
+		}
 	
 	 public static boolean isOdd(int nro) {
-		 if(nro>0) {
-			int resto=nro%2;
+		 int resto=nro%2;
 			 if(resto==0) {
 				 return false;
 			 }
@@ -48,9 +50,4 @@ public class EjercicioSumaImpar {
 				 return true;
 			 }
 		 }
-		 else {
-			 return false;
-		 }
-				 
-			 }
 }
