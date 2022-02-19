@@ -85,7 +85,7 @@ public class Main {
 		}
 		*/
 		
-		System.out.println("Ingrese el mes con numero: ");
+		/*System.out.println("Ingrese el mes con numero: ");
 		sc=new Scanner(System.in);
 		int mesNumero=sc.nextInt();
 		
@@ -94,8 +94,21 @@ public class Main {
 		int anioNumero=sc1.nextInt();
 		
 		int cantidadDias=diasDelMes.getDaysInMonth(mesNumero, anioNumero);
+	
+		System.out.println("El mes tiene "+cantidadDias+" dias.");*/
 		
-		System.out.println("El mes tiene "+cantidadDias+" dias.");
+		Persona persona = new Persona();
+		persona.setFirstName(""); // firstName se establece en una cadena vacía
+		persona.setLastName(""); // lastName se establece en una cadena vacía
+		persona.setAge(10);
+		System.out.println("fullName= " + persona.getFullName());
+		System.out.println("adolescente= " + persona.isTeen());
+		persona.setFirstName("Juan"); // firstName se establece en John
+		persona.setAge(18);
+		System.out.println("fullName= " + persona.getFullName());
+		System.out.println("adolescente= " + persona.isTeen());
+		persona.setLastName("Smith"); // lastName se establece en Smith
+		System.out.println("fullName= " + persona.getFullName());
 	}
 
 	}
