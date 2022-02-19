@@ -58,7 +58,7 @@ public class Main {
 		sc1=new Scanner(System.in);
 		double anchoPared=sc1.nextDouble(); */
 		
-		System.out.println("Ingrese el area total a pintar: ");
+	/*	System.out.println("Ingrese el area total a pintar: ");
 		sc1=new Scanner(System.in);
 		double areaPared=sc1.nextDouble();
 		
@@ -74,7 +74,7 @@ public class Main {
 		
 		int comprar=calculaPintura.getBucketCount(alturaPared, anchoPared, areaAbarcaPintura);*/
 		
-		int comprar=calculaPintura.getBucketCount(areaPared,areaAbarcaPintura);
+	/*	int comprar=calculaPintura.getBucketCount(areaPared,areaAbarcaPintura);
 		
 		
 		if(comprar >0) {
@@ -83,8 +83,19 @@ public class Main {
 		else {
 			System.out.println("No necesita comprar pintura");
 		}
+		*/
 		
+		System.out.println("Ingrese el mes con numero: ");
+		sc=new Scanner(System.in);
+		int mesNumero=sc.nextInt();
 		
+		System.out.println("Ingrese el año: ");
+		sc1=new Scanner(System.in);
+		int anioNumero=sc1.nextInt();
+		
+		int cantidadDias=diasDelMes.getDaysInMonth(mesNumero, anioNumero);
+		
+		System.out.println("El mes tiene "+cantidadDias+" dias.");
 	}
 
 	}
