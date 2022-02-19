@@ -111,7 +111,7 @@ public class Main {
 		System.out.println("fullName= " + persona.getFullName());
 		System.out.println("adolescente= " + persona.isTeen());
 		persona.setLastName("Smith"); // lastName se establece en Smith
-		System.out.println("fullName= " + persona.getFullName());*/
+		System.out.println("fullName= " + persona.getFullName());
 		
 		SImpleCalculator calculator = new SImpleCalculator();
 		calculator.setFirstNumber(5.0);
@@ -121,7 +121,22 @@ public class Main {
 		calculator.setFirstNumber(5.25);
 		calculator.setSecondNumber(0);
 		System.out.println("multiply= " + calculator.getMultiplicationResult());
-		System.out.println("divide= " + calculator.getDivisionResult());
+		System.out.println("divide= " + calculator.getDivisionResult());*/
+		
+		System.out.println("Ingrese una edad: ");
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		
+		System.out.println("Ingrese una edad: ");
+		Scanner sc1=new Scanner(System.in);
+		int b=sc1.nextInt();
+		
+		System.out.println("Ingrese una edad: ");
+		Scanner sc2=new Scanner(System.in);
+		int c=sc2.nextInt();
+		
+		System.out.println(Adolescente.hasTeen(a));
+		
 
 	}
 
