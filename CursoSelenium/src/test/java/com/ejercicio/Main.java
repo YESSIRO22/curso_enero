@@ -48,29 +48,43 @@ public class Main {
 		System.out.println("El area del rectangulo es "+calculaArea.area(alturaRectangulo,anchoRectangulo));
 		*/
 		
-		System.out.println("Ingrese la altura: ");
+	/*	System.out.println("Ingrese la altura: ");
+	 * 
+	 //
 		sc=new Scanner(System.in);
 		double alturaPared=sc.nextDouble();
 		
 		System.out.println("Ingrese el ancho: ");
 		sc1=new Scanner(System.in);
-		double anchoPared=sc1.nextDouble();
+		double anchoPared=sc1.nextDouble(); */
+		
+		System.out.println("Ingrese el area total a pintar: ");
+		sc1=new Scanner(System.in);
+		double areaPared=sc1.nextDouble();
 		
 		System.out.println("Ingrese el area que cubre la pintura a comprar: ");
 		sc2=new Scanner(System.in);
 		double areaAbarcaPintura=sc2.nextDouble();
 		
-		System.out.println("Ingrese los tachos de pintura extra: ");
+		/*System.out.println("Ingrese los tachos de pintura extra: ");
 		sc3=new Scanner(System.in);
 		int pinturasExtras=sc3.nextInt();
-		
+	
 		int comprar=calculaPintura.getBucketCount(alturaPared, anchoPared, areaAbarcaPintura, pinturasExtras);
+		
+		int comprar=calculaPintura.getBucketCount(alturaPared, anchoPared, areaAbarcaPintura);*/
+		
+		int comprar=calculaPintura.getBucketCount(areaPared,areaAbarcaPintura);
+		
+		
 		if(comprar >0) {
-		System.out.println("Necesita comprar "+calculaPintura.getBucketCount(alturaPared, anchoPared, areaAbarcaPintura, pinturasExtras)+" tachos de pintura.");
+		System.out.println("Necesita comprar "+comprar+" tachos de pintura.");
 		}
 		else {
 			System.out.println("No necesita comprar pintura");
 		}
+		
+		
 	}
 
-}
+	}
