@@ -97,6 +97,9 @@ public class Main {
 	
 		System.out.println("El mes tiene "+cantidadDias+" dias.");*/
 		
+		
+		//metodos getters and setters
+		/*
 		Persona persona = new Persona();
 		persona.setFirstName(""); // firstName se establece en una cadena vacía
 		persona.setLastName(""); // lastName se establece en una cadena vacía
@@ -108,7 +111,18 @@ public class Main {
 		System.out.println("fullName= " + persona.getFullName());
 		System.out.println("adolescente= " + persona.isTeen());
 		persona.setLastName("Smith"); // lastName se establece en Smith
-		System.out.println("fullName= " + persona.getFullName());
+		System.out.println("fullName= " + persona.getFullName());*/
+		
+		SImpleCalculator calculator = new SImpleCalculator();
+		calculator.setFirstNumber(5.0);
+		calculator.setSecondNumber(4);
+		System.out.println("add= " + calculator.getAdditionResult());
+		System.out.println("subtract= " + calculator.getSubtractionResult());
+		calculator.setFirstNumber(5.25);
+		calculator.setSecondNumber(0);
+		System.out.println("multiply= " + calculator.getMultiplicationResult());
+		System.out.println("divide= " + calculator.getDivisionResult());
+
 	}
 
 	}
