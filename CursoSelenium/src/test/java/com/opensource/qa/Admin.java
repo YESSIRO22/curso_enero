@@ -190,11 +190,57 @@ public class Admin {
 
 		// Step 16
 		Reporter.log("Close Browser");
-		driver.close();
-
-
-	  
+		driver.close();	  
   }
+  
+  
+  @Test
+    public void tc006ValidateUserAdmin() {
+	  
+		// Step 1
+		Reporter.log("Launch Browser");
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chrome/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
+
+		// Step 2
+		Reporter.log("Enter username and password");
+		driver.findElement(By.id("txtUsername")).sendKeys(username);
+		driver.findElement(By.id("txtPassword")).sendKeys(password);
+		
+		//Step 3
+		Reporter.log("Click Login");
+		driver.findElement(By.id("btnLogin")).click();
+
+		// Step 4
+		Reporter.log("Validate that you have logged in successfully");
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='welcome']")));
+		
+		//Step 5
+		Reporter.log("Click Admin tab");
+		driver.findElement(By.xpath("//a[@id='menu_admin_viewAdminModule']")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		//Step 6
+		Reporter.log("Enter 'Admin' username text box");
+		driver.findElement(By.id("searchSystemUser_userName")).sendKeys("Admin");
+
+		// Step 7
+		Reporter.log("Click Search button");
+		driver.findElement(By.id("searchBtn")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		//Step 8
+		Reporter.log("Validate 'Admin' exist in result table");
+		String actualValue = driver.findElement(By.xpath("//tbody/tr[1]/td[2]")).getText();
+		Assert.assertEquals(actualValue, "Admin");
+
+  }
+  
+ 
+  
   
   
   
