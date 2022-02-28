@@ -239,12 +239,31 @@ public class Admin {
 
   }
   
+  
+  @Test
+  
+  public void tc007ValidateInvalidPassword() {
+	// Step 1
+	Reporter.log("Launch Browser");
+	System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chrome/chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
+	driver.get("https://opensource-demo.orangehrmlive.com/");
+	driver.manage().window().maximize();
+	
+	//Step 2
+	Reporter.log("Enter username and incorrect password");
+	driver.findElement(By.id("txtUsername")).sendKeys("prueba");
+	driver.findElement(By.id("txtPassword")).sendKeys("prueba");
+	
+	//Step 3
+	Reporter.log("Click Login");
+	driver.findElement(By.id("btnLogin")).click();
+	
+	//Step 4
+	Reporter.log("Verify error message when enter invalid password");
+	driver.findElement(By.xpath("//*[@id=\"spanMessage\"]"));
+  }
  
-  
-  
-  
-  
-  
   
   @AfterTest
   public void afterTest() {
